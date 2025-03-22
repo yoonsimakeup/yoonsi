@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="YOONSI는 자연스러움 속 본연의 아름다움을 찾는 네추럴 뷰티 메이커입니다. 메이크업과 헤드스파를 통해 내면과 외면의 조화를 이끌어냅니다." />
+    <meta name="keywords" content="YOONSI, 헤드스파, 내추럴 메이크업, 뷰티 테라피, 자연스러운 아름다움" />
+    <meta name="author" content="YOONSI" />
+
+    <link rel="canonical" href="https://yoonsi.com" />
+    <link rel="icon" href="https://ugc.production.linktr.ee/32206866-43a4-4d91-878f-9d56e149a346_IMG-2109.jpeg" type="image/jpeg" />
+
+    <meta property="og:title" content="YOONSI NATURAL BEAUTY MAKER" />
+    <meta property="og:description" content="YOONSI는 자연스러움 속 본연의 아름다움을 찾는 네추럴 뷰티 메이커입니다." />
+    <meta property="og:url" content="https://yoonsi.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://ugc.production.linktr.ee/32206866-43a4-4d91-878f-9d56e149a346_IMG-2109.jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="YOONSI NATURAL BEAUTY MAKER" />
+    <meta name="twitter:description" content="YOONSI는 자연스러움 속 본연의 아름다움을 찾는 네추럴 뷰티 메이커입니다." />
+    <meta name="twitter:image" content="https://ugc.production.linktr.ee/32206866-43a4-4d91-878f-9d56e149a346_IMG-2109.jpeg" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Roboto:wght@400;700&display=swap" />
+
+    <title>YOONSI</title>
+
+    <style>
+        :root {
+          --main-bg: #faf8f6;
+          --main-color: #2d2a26;
+          --accent-light: #eae1d8;
+          --button-bg: #a59a91;
+          --button-active: #8d837a;
+          --link-bg: #fff;
+          --link-border: #e0e0e0;
+        }
+        
+        body.dark-mode {
+          --main-bg: #121212;
+          --main-color: #e0e0e0;
+          --accent-light: #333;
+          --button-bg: #444;
+          --button-active: #555;
+          --link-bg: #222;
+          --link-border: #444;
+        }
+        
+        body.dark-mode header p.subtitle { color: #ccc; }
+        body.dark-mode .container h3 { color: #ccc; }
+    
+        .skip-link {
+          position: absolute;
+          left: -999px;
+          top: auto;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+        }
+        .skip-link:focus {
+          position: absolute;
+          left: 10px;
+          top: 10px;
+          width: auto;
+          height: auto;
+          background: var(--accent-light);
+          color: var(--main-color);
+          padding: 0.5rem;
+          z-index: 1000;
+        }
+    
+        summary {
+          font-weight: bold;
+        }
+    
+        summary:hover {
+          cursor: pointer;
+          color: var(--button-active);
+        }
+        
+        h2::before {
+          content: "";
+          display: inline-block;
+          width: 10px;
+          height: 40px;
+          background-color: var(--button-active);
+          margin-right: 10px;
+          vertical-align: middle;
+        }
+    
+        * { box-sizing: border-box; }
+        body {
+          margin: 0;
+          font-family: 'Noto Sans KR', sans-serif;
+          background-color: var(--main-bg);
+          color: var(--main-color);
+          line-height: 1.7;
+          overflow-x: hidden;
+          transition: background-color 0.3s, color 0.3s;
+        }
+    
+        header, nav, main, footer, section, article { display: block; }
+    
+        header {
+          background-color: var(--accent-light);
+          padding: 2rem 1rem;
+          text-align: center;
+          position: relative;
+        }
+    
+        header .logo {
+          width: 90px;
+          height: 90px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-bottom: 1rem;
+        }
+    
+        header h1 { margin: 0.5rem 0 0.3rem; font-size: 2rem; letter-spacing: 2px; font-weight: 700; }
+    
+        header p.subtitle { margin: 0; font-size: 1.2rem; color: #555; }
+        
+        .toggle-controls {
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          display: flex;
+          gap: 0.5rem;
+        }
+        .toggle-controls button {
+          background-color: var(--button-bg);
+          border: none;
+          color: #fff;
+          padding: 0.4rem 0.8rem;
+          border-radius: 20px;
+          font-size: 0.85rem;
+          cursor: pointer;
+          transition: background-color 0.3s, transform 0.2s;
+        }
+    
+        .toggle-controls button.active,
+        .toggle-controls button:hover {
+          background-color: var(--button-active);
+          transform: scale(1.05);
+        }
+        nav { margin-top: 1.5rem; }
+        nav ul {
+          list-style: none;
+          padding: 0;
+          display: inline-flex;
+          gap: 0.5rem;
+        }
+        nav button {
+          background-color: var(--button-bg);
+          border: none;
+          color: #fff;
+          padding: 0.5rem 1rem;
+          border-radius: 25px;
+          font-size: 0.95rem;
+          cursor: pointer;
+          transition: background-color 0.3s, transform 0.2s;
+        }
+        nav button.active,
+        nav button:hover {
+          background-color: var(--button-active);
+          transform: scale(1.05);
+        }
+        main {
+          max-width: 840px;
+          margin: 2rem auto;
+          padding: 0 1rem;
+        }
+        
+        .container { margin-bottom: 3rem; }
+        .lang-section { display: none; opacity: 0; transition: opacity 0.5s ease; }
+        .lang-section.active { display: block; opacity: 1; }
+        .container section { margin-bottom: 2rem; }
+        .container h2 {
+          font-size: 1.8rem;
+          margin-bottom: 0.5rem;
+          font-weight: 700;
+          border-bottom: 1px solid var(--link-border);
+          padding-bottom: 0.3rem;
+        }
+        .container h4 {
+          font-size: 1.1rem;
+          font-weight: 500;
+          color: #5e5a55;
+          margin-top: 0.5rem;
+        }
+        .container p { margin: 0.6rem 0; font-size: 1rem; }
+        
+        #all-links { margin-bottom: 3rem; }
+        #all-links h2 {
+          font-size: 1.8rem;
+          margin-bottom: 0.5rem;
+          font-weight: 700;
+          border-bottom: 1px solid var(--link-border);
+          padding-bottom: 0.3rem;
+        }
+        #all-links p { font-size: 1rem; margin: 0.5rem 0 1rem; }
+        
+        #all-links .link-buttons {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          align-items: flex-start;
+        }
+        .link-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          width: 100%;
+          padding: 0.75rem 1.5rem;
+          border: 1px solid var(--link-border);
+          border-radius: 5px;
+          text-decoration: none;
+          color: var(--main-color);
+          font-weight: 500;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .link-btn:hover {
+          background-color: var(--accent-light);
+          transform: scale(1.02);
+        }
+        footer {
+          text-align: center;
+          padding: 2rem 1rem;
+          font-size: 0.9rem;
+          color: #777;
+          border-top: 1px solid var(--link-border);
+        }
+        footer a { color: inherit; text-decoration: none; }
+        @media (max-width: 768px) {
+          header h1 { font-size: 1.6rem; }
+          .toggle-controls { top: 0.5rem; right: 0.5rem; }
+          main { padding: 0 1rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#main" class="skip-link">본문 바로가기</a>
+
+    <header>
+        <img src="https://ugc.production.linktr.ee/32206866-43a4-4d91-878f-9d56e149a346_IMG-2109.jpeg" alt="YOONSI 로고" class="logo" />
+        <h1>YOONSI NATURAL BEAUTY MAKER</h1>
+        <p class="subtitle">MAKEUP &amp; HEADSPA</p>
+        <div class="toggle-controls">
+            <button type="button" id="darkModeToggle">🌙 다크 모드</button>
+        </div>
+        <nav aria-label="언어 선택">
+            <ul>
+                <li>
+                    <button type="button" class="lang-toggle active" data-lang="lang-ko">🇰🇷 한국어</button>
+                </li>
+                <li>
+                    <button type="button" class="lang-toggle" data-lang="lang-en">🇺🇸 English</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="container">
+            <div class="lang-section active" id="lang-ko">
+                <section>
+                    <h2>YOONSI</h2>
+                    <p>YOONSI는 크리에이티브 디렉터 윤시의 비전에서 시작되었습니다. 단순히 외면을 꾸미는 것을 넘어, 내면과의 깊은 연결을 통해 진정한 자연 그대로의 본모습을 표현하는 공간을 만들고자 했습니다. 메이크업과 헤드스파라는 특별한 경험을 통해, 고객은 스스로를 탐구하고, 내면의 아름다움과 외면의 조화를 느낍니다. YOONSI는 "있는 그대로의 나"를 온전히 받아들이고 사랑할 수 있는 공간을 제공합니다.</p>
+                </section>
+
+                <section>
+                    <h2>프로그램 안내</h2>
+                </section>
+
+                <section>
+                    <h3>💆🏻‍♀️ 에센셜 스파</h3>
+                    <p>
+                        맞춤형 아로마와 리클라이닝 전신 안마베드에서 두피부터 전신까지 순환을 도와줍니다. 시로다라 워터 스파와 싱잉볼 테라피로 마음의 긴장을 풀어주는 짧지만 깊은 힐링 코스입니다.
+                    </p>
+                    <details>
+                        <summary>코스 상세 보기</summary>
+                        <ol>
+                            <li>
+                                <strong>티타임 및 아로마 초이스</strong>
+                                <p>
+                                    웰컴티와 함께 오늘의 컨디션을 상담하며 맞춤형 아로마를 제안합니다.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>전신 마사지 베드</strong>
+                                <p>
+                                    리클라이닝 전신 안마베드에서 두피뿐 아니라 전신의 순환을 도와드립니다.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>리프레싱 샴푸</strong>
+                                <p>
+                                    굳은 두피와 노폐물을 부드럽게 정리해주는 샴푸로, 버블 &amp; 워터 사운드 테라피와 함께 파도 소리를 느껴보세요.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>두피 영양 &amp; 스케일링</strong>
+                                <p>
+                                    두피 마사지와 함께 영양 트리트먼트를 채워주고, 부드러워진 노폐물을 정리해 건강한 두피로 가꿔줍니다.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>두피 &amp; 모발 트리트먼트</strong>
+                                <p>
+                                    건조하고 손상된 두피와 모발에 보습과 윤기를 더해줍니다.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>시로다라 워터 스파</strong>
+                                <p>
+                                    아유르베다 치유 요법으로 이마에 아로마를 더한 따뜻한 물을 흘려보내 몸과 마음의 걱정과 긴장을 흘려보내세요.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>싱잉볼 테라피</strong>
+                                <p>
+                                    싱잉볼의 부드러운 진동과 소리가 마음을 현재에 집중하도록 도와줍니다.
+                                </p>
+                            </li>
+                        </ol>
+                    </details>
+                </section>
+
+                <section>
+                    <h3>💆🏻‍♀️ 케어 &amp; 릴랙스 테라피</h3>
+                    <p>
+                        두피부터 피부, 전신의 흐름을 정돈하며 깊은 휴식을 선사하는 코스입니다. 개인 맞춤형 두피 진단과 페이셜 케어, 얼굴과 어깨의 긴장을 풀어주는 릴랙싱 마사지가 포함됩니다. 싱잉볼과 코시차임 사운드 테라피로 몸과 마음을 잔잔히 어루만지며 고요와 회복을 선사합니다.
+                    </p>
+                    <details>
+                        <summary>코스 상세 보기</summary>
+                        <p>에센셜 스파의 모든 과정을 포함하며, 여섯 가지 추가 단계로 확장된 프로그램입니다.</p>
+                        <ol>
+                            <li>
+                                <strong>두피 진단</strong>
+                                <p>
+                                    현재 두피와 모발 상태를 점검해 맞춤형 케어 방향을 제안합니다.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>페이셜 스킨케어</strong>
+                                <p>
+                                    두피와 피부는 하나로 연결되어 있습니다. 함께 관리하며 더욱 깊은 힐링을 경험하세요.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>릴렉싱 마사지</strong>
+                                <p>
+                                    두피부터 귀, 목, 어깨까지 이어지는 릴렉싱 케어로 림프 순환을 돕고 긴장을 부드럽게 풀어드립니다.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>딥 클렌징 샴푸</strong>
+                                <p>
+                                    두피 스케일링 브러쉬로 노폐물을 부드럽게 제거하고 혈액 순환과 시원함을 선사합니다.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>스페셜 트리트먼트</strong>
+                                <p>
+                                    예민한 두피를 진정시키고, 손상된 모발을 위한 3단계 영양 &amp; 보습 케어를 제공합니다.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>사운드 테라피 – 싱잉볼 &amp; 코시차임</strong>
+                                <p>
+                                    깊고 풍부한 울림의 싱잉볼과 바람처럼 맑은 코시차임이 몸과 마음을 잔잔히 어루만지며 평온을 선사합니다.
+                                </p>
+                            </li>
+                        </ol>
+                    </details>
+                </section>
+
+                <section>
+                    <h3>💆🏻‍♀️ 시그니처 사운드 힐링 테라피</h3>
+                    <p>
+                        시그니처 사운드 힐링 테라피는 스파와 함께 아로마 터치, 울림 있는 사운드 테라피로 깊고 편안한 치유의 시간을 선사합니다. 리프팅 마사지와 모이스처라이징 팩으로 피부와 근육의 긴장을 풀어준 뒤, 싱잉볼과 띵샤의 울림이 온몸을 감싸며 평온한 에너지를 채워줍니다. 마무리로는 풋 테라피로 따뜻한 물과 아로마 향을 느끼며 긴장을 풀거나, 혹은 내추럴 베이스 메이크업으로 맑고 자연스러운 피부 표현을 완성할 수 있습니다.
+                    </p>
+                    <details>
+                        <summary>코스 상세 보기</summary>
+                        <p>앞선 두 코스의 모든 과정을 포함하고, 네 가지 프리미엄 단계를 더해 완성되는 시그니처 테라피입니다.</p>
+                        <ol>
+                            <li>
+                                <strong>리프팅 마사지</strong>
+                                <p>
+                                    굳은 두피를 풀어주며 얼굴선까지 자연스럽게 리프팅합니다.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>페이셜 모이스처라이징 팩</strong>
+                                <p>
+                                    긴 스파 시간 동안 피부를 진정시키고 영양을 더하는 촉촉한 수분 케어입니다.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>아로마 터치</strong>
+                                <p>
+                                    8가지 아로마 오일로 목과 어깨를 감싸고, 따뜻한 스톤으로 몸을 데워 깊은 피로를 녹여줍니다.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>옵션 1: 사운드 베스</strong>
+                                <p>
+                                    풋 테라피로 따뜻한 물과 아로마 향기를 느끼며 몸을 깨우고, 싱잉볼, 코시차임, 띵샤의 조화로운 연주로 스파를 마무리합니다. 전신의 에너지가 조화롭게 회복되는 평온한 마무리를 경험해보세요.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>옵션 2: 내추럴 베이스 메이크업</strong>
+                                <p>
+                                    스파 후 최상의 피부 컨디션 위에 자연스럽고 맑은 내추럴 베이스 메이크업으로 오늘 하루의 빛나는 아름다움을 완성해보세요.
+                                </p>
+                            </li>
+                        </ol>
+                    </details>
+                </section>
+
+                <section>
+                    <h2>유의 사항</h2>
+                </section>
+
+                <section>
+                    <h3>ℹ️ 기장 추가금 안내</h3>
+                    <p>기장에 따라 러닝 타임이 10~20분 더 소요됩니다.</p>
+                    <ul>
+                        <li>어깨선 아래: 20,000원 (10분)</li>
+                        <li>가슴선 아래: 30,000원 (20분)</li>
+                    </ul>
+                    <p><strong>&#8251; 티켓 회원은 추가금이 면제됩니다.</strong></p>
+                </section>
+
+                <section>
+                    <h2>티켓 선물권</h2>
+                    <p>당신의 소중한 분이 자신만의 진정한 아름다움을 찾을 수 있도록 자연스러운 아름다움과 깊은 휴식을 사랑하는 사람에게 선물하세요. 당신의 마음을 담은 특별한 시간을 직접 전해보세요.</p>
+                </section>
+
+                <section>
+                    <h3>🎫 헤드스파 힐링 티켓</h3>
+                    <ul>
+                        <li>5회권: 10% 할인</li>
+                        <li>10회권: 20% 할인</li>
+                        <li>사용 기한: 1년</li>
+                        <li>가족, 친구와 함께 사용 가능</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>🎫 내추럴 글로우 티켓</h3>
+                    <p>헤드스파, 메이크업, 메이크업 클래스 — YOONSI의 모든 서비스를 함께 누릴 수 있는 통합 티켓입니다.</p>
+                    <ul>
+                        <li>가격: 2,000,000원 (VAT 별도)</li>
+                        <li>200,000원 추가 적립</li>
+                        <li>전 코스 20% 할인</li>
+                        <li>사용 기한: 1년</li>
+                        <li>가족, 친구와 함께 사용 가능</li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="lang-section" id="lang-en">
+                <section>
+                    <h2>YOONSI</h2>
+                    <p>YOONSI was born from the vision of Creative Director Yoonsi. It goes beyond enhancing outer beauty — it's about connecting with your inner self and expressing your true, natural essence. Through the transformative experiences of makeup
+                        and head spa, clients are invited to reconnect with their inner selves and discover harmony between inner beauty and outer expression. YOONSI is a space where you’re invited to embrace your true self — exactly as you are.</p>
+                </section>
+
+                <section>
+                    <h2>Program Info</h2>
+                </section>
+
+                <section>
+                    <h3>💆🏻‍♀️ Essential Spa</h3>
+                    <p>
+                        A short yet deeply relaxing escape for busy days. Aroma blending and reclining full-body massage support soothing circulation from head to toe. Concludes with Shirodhara-inspired water therapy and singing bowl sounds — short but deeply calming.
+                    </p>
+                    <details>
+                        <summary>View Course Details</summary>
+                        <ol>
+                            <li>
+                                <strong>Tea Time &amp; Aroma Selection</strong>
+                                <p>
+                                    Begin your session with a welcome tea and consultation. A personalized aroma is selected based on your condition that day.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Full-Body Massage Bed</strong>
+                                <p>
+                                    A reclining massage bed promotes not only scalp care but also full-body circulation.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Refreshing Shampoo</strong>
+                                <p>
+                                    A gentle shampoo removes buildup from the scalp. Experience the calming sounds of bubbles and water, like waves washing over you.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Scalp Nutrition &amp; Scalp Scaling</strong>
+                                <p>
+                                    A nourishing scalp treatment combined with massage helps soften and remove impurities, leaving the scalp balanced and healthy.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Scalp &amp; Hair Treatment</strong>
+                                <p>
+                                    Restores moisture and shine to dry or damaged scalp and hair.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Shirodhara Water Spa</strong>
+                                <p>
+                                    Inspired by Ayurvedic healing, warm aromatic water flows over the forehead to wash away mental and physical tension.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Singing Bowl Therapy</strong>
+                                <p>
+                                    The soft vibrations and sounds of singing bowls help center your awareness and calm the mind.
+                                </p>
+                            </li>
+                        </ol>
+                    </details>
+                </section>
+
+                <section>
+                    <h3>💆🏻‍♀️ Care &amp; Relax Therapy</h3>
+                    <p>
+                        This therapy resets the flow from the scalp through the body, encouraging full relaxation and renewal. It includes personalized scalp diagnosis, facial care, and a relaxing massage to release facial and shoulder tension. Singing bowls and Koshi chimes
+                        gently calm the senses and bring deep serenity.
+                    </p>
+                    <details>
+                        <summary>View Course Details</summary>
+                        <p>
+                            This course includes all elements of the Essential Spa and adds six additional steps for a deeper healing experience.
+                        </p>
+                        <ol>
+                            <li>
+                                <strong>Scalp Diagnosis</strong>
+                                <p>
+                                    A personalized scalp assessment determines the best course of care for your needs.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Facial Skincare</strong>
+                                <p>
+                                    The scalp and skin are connected — experience deeper healing by caring for both together.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Relaxing Massage</strong>
+                                <p>
+                                    A gentle massage from the scalp to the ears, neck, and shoulders releases tension and supports lymphatic flow.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Deep Cleansing Shampoo</strong>
+                                <p>
+                                    A scalp brush removes impurities while stimulating circulation and leaving the scalp refreshed.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Special Treatment</strong>
+                                <p>
+                                    A three-step treatment calms sensitive scalps, nourishes deeply, and promotes hair recovery and hydration.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Sound Therapy – Singing Bowl &amp; Koshi Chime</strong>
+                                <p>
+                                    The rich resonance of singing bowls combines with the soft, wind-like tones of Koshi chimes, bringing serenity to body and mind.
+                                </p>
+                            </li>
+                        </ol>
+                    </details>
+                </section>
+
+                <section>
+                    <h3>💆🏻‍♀️ Signature Sound Healing Therapy</h3>
+                    <p>
+                        This signature therapy offers a deeply soothing experience where spa, aroma, and sound unite in harmony. A lifting massage and hydrating facial mask help release tension from skin and muscles. Vibrations from singing bowls and tingsha envelop the body,
+                        restoring inner peace. Conclude with a warm foot soak or a natural base makeup to highlight your post-spa glow.
+                    </p>
+                    <details>
+                        <summary>View Course Details</summary>
+                        <p>
+                            This session includes all features of the previous two courses, plus four premium elements for a truly profound healing experience.
+                        </p>
+                        <ol>
+                            <li>
+                                <strong>Lifting Massage</strong>
+                                <p>
+                                    Relieves tightness in the scalp and naturally lifts the facial contours.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Facial Moisturizing Pack</strong>
+                                <p>
+                                    A hydrating mask applied during the session nourishes and soothes the skin.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Aroma Touch</strong>
+                                <p>
+                                    Eight essential oils are used to warm and relax the neck and shoulders, accompanied by hot stones to melt away fatigue.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Option 1: Sound Bath</strong>
+                                <p>
+                                    A warm aromatic foot soak followed by the harmonious blend of singing bowls, Koshi chimes, and tingsha brings deep peace. A soothing finale that helps restore whole-body energy balance.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Option 2: Natural Base Makeup</strong>
+                                <p>
+                                    Enhance your post-spa glow with a luminous, natural base makeup that reflects your best self throughout the day.
+                                </p>
+                            </li>
+                        </ol>
+                    </details>
+                </section>
+
+                <section>
+                    <h2>Notice</h2>
+                </section>
+
+                <section>
+                    <h3>ℹ️ Additional Charge for Long Hair</h3>
+                    <p>Depending on hair length, session time may increase by 10–20 minutes.</p>
+                    <ul>
+                        <li>Below the shoulders: 20,000 KRW (10 minutes)</li>
+                        <li>Below the chest: 30,000 KRW (20 minutes)</li>
+                    </ul>
+                    <p><strong>Ticket members are exempt from the additional charge.</strong></p>
+                </section>
+
+                <section>
+                    <h2>Gift Ticket</h2>
+                    <p>
+                        Give the gift of natural beauty and deep relaxation to someone you cherish. Let your loved one rediscover their true beauty with a heartfelt gift of healing time.
+                    </p>
+                </section>
+
+                <section>
+                    <h3>🎫 HeadSpa Healing Ticket</h3>
+                    <ul>
+                        <li>5-session pass: 10% off</li>
+                        <li>10-session pass: 20% off</li>
+                        <li>Valid for 1 year</li>
+                        <li>Can be shared with family and friends</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>🎫 Natural Glow Ticket</h3>
+                    <p>This all-inclusive ticket provides access to all YOONSI services — head spa, makeup, and makeup class.</p>
+                    <ul>
+                        <li>Price: 2,000,000 KRW (VAT not included)</li>
+                        <li>Includes an additional credit of 200,000 KRW</li>
+                        <li>20% discount on all services</li>
+                        <li>Valid for 1 year</li>
+                        <li>Can be shared with family and friends</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <section id="all-links">
+            <div class="lang-section active" id="links-ko">
+                <h2>모든 링크</h2>
+                <p>아래에서 다양한 채널과 서비스를 이용하세요.</p>
+                <div class="link-buttons">
+                    <a class="link-btn" href="https://booking.naver.com/booking/6/bizes/700220" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2zm0 16H5V9h14v11zM5 7V6h14v1H5z" />
+                        </svg>
+                        네이버 예약
+                    </a>
+                    <a class="link-btn" href="https://pf.kakao.com/_mGIJb/chat" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20 2H4a2 2 0 00-2 2v14a2 2 0 002 2h14l4 4V4a2 2 0 00-2-2z" />
+                        </svg>
+                        상담 및 문의
+                    </a>
+                    <a class="link-btn" href="https://smartstore.naver.com/yoonsimakeup" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4H6zm0 2h12l2.25 3H3.75L6 4zm0 5v9h12v-9H6z" />
+                        </svg>
+                        스마트스토어
+                    </a>
+                    <a class="link-btn" href="https://naver.me/5a8Ow7eP" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
+                        </svg>
+                        오시는 길
+                    </a>
+                    <a class="link-btn" href="https://m.blog.naver.com/yoonsimakeup/222555724551" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 2h16a2 2 0 012 2v18a2 2 0 01-2 2H4a2 2 0 01-2-2V4a2 2 0 012-2zm0 2v16h16V4H4z" />
+                            <path d="M8 6h10v2H8V6zm0 4h10v2H8v-2zm0 4h10v2H8v-2z" />
+                            <circle cx="6" cy="7" r="1" />
+                            <circle cx="6" cy="11" r="1" />
+                            <circle cx="6" cy="15" r="1" />
+                        </svg>
+                        레슨 커리큘럼 &amp; 수강료 안내
+                    </a>
+                    <a class="link-btn" href="https://www.instagram.com/yoonsi.makeup" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7.75 2h8.5A5.76 5.76 0 0122 7.75v8.5A5.76 5.76 0 0116.25 22h-8.5A5.76 5.76 0 012 16.25v-8.5A5.76 5.76 0 017.75 2zm0 1.5A4.26 4.26 0 003.5 7.75v8.5A4.26 4.26 0 007.75 20.5h8.5A4.26 4.26 0 0020.5 16.25v-8.5A4.26 4.26 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm4.75-.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"
+                            />
+                        </svg>
+                        인스타그램 - @yoonsi.makeup
+                    </a>
+                    <a class="link-btn" href="https://www.instagram.com/yoonsi.headspa" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7.75 2h8.5A5.76 5.76 0 0122 7.75v8.5A5.76 5.76 0 0116.25 22h-8.5A5.76 5.76 0 012 16.25v-8.5A5.76 5.76 0 017.75 2zm0 1.5A4.26 4.26 0 003.5 7.75v8.5A4.26 4.26 0 007.75 20.5h8.5A4.26 4.26 0 0020.5 16.25v-8.5A4.26 4.26 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm4.75-.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"
+                            />
+                        </svg>
+                        인스타그램 - @yoonsi.headspa
+                    </a>
+                    <a class="link-btn" href="https://pages.map.naver.com/save-pages/web/detail-list/da7eca70304f4e71841f50abde3eaeb7?external=true" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M18 3H6a2 2 0 00-2 2v9a6 6 0 006 6h6a6 6 0 006-6V5a2 2 0 00-2-2zm0 11a4 4 0 01-4 4H10a4 4 0 01-4-4V5h12v9z" />
+                            <path d="M8 7h8v2H8z" />
+                        </svg>
+                        보문동 맛집 &amp; 카페
+                    </a>
+                </div>
+            </div>
+            <div class="lang-section" id="links-en">
+                <h2>All Links</h2>
+                <p>Access various channels and services below.</p>
+                <div class="link-buttons">
+                    <a class="link-btn" href="https://booking.naver.com/booking/6/bizes/700220" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2zm0 16H5V9h14v11zM5 7V6h14v1H5z" />
+                        </svg>
+                        Naver Reservation
+                    </a>
+                    <a class="link-btn" href="https://pf.kakao.com/_mGIJb/chat" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20 2H4a2 2 0 00-2 2v14a2 2 0 002 2h14l4 4V4a2 2 0 00-2-2z" />
+                        </svg>
+                        Consultation &amp; Inquiry
+                    </a>
+                    <a class="link-btn" href="https://smartstore.naver.com/yoonsimakeup" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4H6zm0 2h12l2.25 3H3.75L6 4zm0 5v9h12v-9H6z" />
+                        </svg>
+                        Naver Smart Store
+                    </a>
+                    <a class="link-btn" href="https://naver.me/5a8Ow7eP" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
+                        </svg>
+                        Location Guide
+                    </a>
+                    <a class="link-btn" href="https://m.blog.naver.com/yoonsimakeup/222555724551" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 2h16a2 2 0 012 2v18a2 2 0 01-2 2H4a2 2 0 01-2-2V4a2 2 0 012-2zm0 2v16h16V4H4z" />
+                            <path d="M8 6h10v2H8V6zm0 4h10v2H8v-2zm0 4h10v2H8v-2z" />
+                            <circle cx="6" cy="7" r="1" />
+                            <circle cx="6" cy="11" r="1" />
+                            <circle cx="6" cy="15" r="1" />
+                        </svg>
+                        Lesson Curriculum &amp; Tuition
+                    </a>
+                    <a class="link-btn" href="https://www.instagram.com/yoonsi.makeup" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7.75 2h8.5A5.76 5.76 0 0122 7.75v8.5A5.76 5.76 0 0116.25 22h-8.5A5.76 5.76 0 012 16.25v-8.5A5.76 5.76 0 017.75 2zm0 1.5A4.26 4.26 0 003.5 7.75v8.5A4.26 4.26 0 007.75 20.5h8.5A4.26 4.26 0 0020.5 16.25v-8.5A4.26 4.26 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm4.75-.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"
+                            />
+                        </svg>
+                        Instagram - @yoonsi.makeup
+                    </a>
+                    <a class="link-btn" href="https://www.instagram.com/yoonsi.headspa" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7.75 2h8.5A5.76 5.76 0 0122 7.75v8.5A5.76 5.76 0 0116.25 22h-8.5A5.76 5.76 0 012 16.25v-8.5A5.76 5.76 0 017.75 2zm0 1.5A4.26 4.26 0 003.5 7.75v8.5A4.26 4.26 0 007.75 20.5h8.5A4.26 4.26 0 0020.5 16.25v-8.5A4.26 4.26 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm4.75-.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"
+                            />
+                        </svg>
+                        Instagram - @yoonsi.headspa
+                    </a>
+                    <a class="link-btn" href="https://pages.map.naver.com/save-pages/web/detail-list/da7eca70304f4e71841f50abde3eaeb7?external=true" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M18 3H6a2 2 0 00-2 2v9a6 6 0 006 6h6a6 6 0 006-6V5a2 2 0 00-2-2zm0 11a4 4 0 01-4 4H10a4 4 0 01-4-4V5h12v9z" />
+                            <path d="M8 7h8v2H8z" />
+                        </svg>
+                        Bomun-dong Food &amp; Cafe
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-icons">
+            <a class="footer-icon" href="https://www.youtube.com/@ahsiyoonharu" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 36 36" aria-hidden="true">
+                    <path d="M23.498 6.186a2.994 2.994 0 00-2.106-2.117C19.641 3.5 12 3.5 12 3.5s-7.641 0-9.392.57A2.994 2.994 0 00.502 6.186 31.49 31.49 0 000 12a31.49 31.49 0 00.502 5.814 2.994 2.994 0 002.106 2.117C4.359 20.5 12 20.5 12 20.5s7.641 0 9.392-.57a2.994 2.994 0 002.106-2.117A31.49 31.49 0 0024 12a31.49 31.49 0 00-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                    />
+                </svg>
+            </a>
+            <a class="footer-icon" href="mailto:yoonsimakeup@gmail.com" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 36 36" aria-hidden="true">
+                    <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8l8 5 8-5v10H4z" />
+                </svg>
+            </a>
+        </div>
+        <div class="lang-section active" id="footer-ko">
+            <p>© 2025 YOONSI. All rights reserved.</p>
+        </div>
+        <div class="lang-section" id="footer-en">
+            <p>© 2025 YOONSI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+          function updateDarkModeButtonText() {
+            const currentLang = document.querySelector('.lang-toggle.active').getAttribute('data-lang');
+            const isDark = document.body.classList.contains('dark-mode');
+            const btn = document.getElementById('darkModeToggle');
+            if(currentLang === "lang-ko") {
+              btn.textContent = isDark ? "☀️ 라이트 모드" : "🌙 다크 모드";
+            } else {
+              btn.textContent = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
+            }
+          }
+          
+          function fadeSwitch(containerSelector, targetId) {
+            const container = document.querySelector(containerSelector);
+            if(!container) return;
+            const sections = container.querySelectorAll('.lang-section');
+            sections.forEach(section => {
+              if(section.id === targetId) {
+                section.style.opacity = 0;
+                section.classList.add('active');
+                setTimeout(() => {
+                  section.style.opacity = 1;
+                }, 50);
+              } else {
+                section.style.opacity = 0;
+                section.classList.remove('active');
+              }
+            });
+          }
+          
+          const langToggles = document.querySelectorAll('.lang-toggle');
+          langToggles.forEach(btn => {
+            btn.addEventListener('click', () => {
+              const newLang = btn.getAttribute('data-lang');
+              langToggles.forEach(b => b.classList.remove('active'));
+              btn.classList.add('active');
+              fadeSwitch('.container', newLang);
+              fadeSwitch('#all-links', "links-" + newLang.split('-')[1]);
+              fadeSwitch('footer', "footer-" + newLang.split('-')[1]);
+              document.documentElement.lang = newLang === 'lang-ko' ? 'ko' : 'en';
+              updateDarkModeButtonText();
+            });
+          });
+          
+          const darkModeToggle = document.getElementById('darkModeToggle');
+          darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            updateDarkModeButtonText();
+          });
+      
+          updateDarkModeButtonText();
+        })();
+    </script>
+</body>
+
+</html>
