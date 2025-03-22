@@ -5,20 +5,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="YOONSI는 자연스러움 속 본연의 아름다움을 찾는 네추럴 뷰티 메이커입니다. 메이크업과 헤드스파를 통해 내면과 외면의 조화를 이끌어냅니다." />
-    <meta name="keywords" content="YOONSI, 헤드스파, 내추럴 메이크업, 뷰티 테라피, 자연스러운 아름다움" />
+    <meta name="keywords" content="YOONSI, 헤드스파, 메이크업, 메이크업 클래스, 내추럴 메이크업, 뷰티 테라피, 자연스러운 아름다움" />
     <meta name="author" content="YOONSI" />
 
-    <link rel="canonical" href="https://yoonsi.com" />
+    <link rel="canonical" href="https://yoonsimakeup.github.io/yoonsi" />
     <link rel="icon" href="https://ugc.production.linktr.ee/32206866-43a4-4d91-878f-9d56e149a346_IMG-2109.jpeg" type="image/jpeg" />
 
     <meta property="og:title" content="YOONSI NATURAL BEAUTY MAKER" />
-    <meta property="og:description" content="YOONSI는 자연스러움 속 본연의 아름다움을 찾는 네추럴 뷰티 메이커입니다." />
-    <meta property="og:url" content="https://yoonsi.com" />
+    <meta property="og:description" content="YOONSI - 자연스러움 속 본연의 아름다움을 찾는 네추럴 뷰티 메이커" />
+    <meta property="og:url" content="https://yoonsimakeup.github.io/yoonsi" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://ugc.production.linktr.ee/32206866-43a4-4d91-878f-9d56e149a346_IMG-2109.jpeg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="YOONSI NATURAL BEAUTY MAKER" />
-    <meta name="twitter:description" content="YOONSI는 자연스러움 속 본연의 아름다움을 찾는 네추럴 뷰티 메이커입니다." />
+    <meta name="twitter:description" content="YOONSI - 자연스러움 속 본연의 아름다움을 찾는 네추럴 뷰티 메이커" />
     <meta name="twitter:image" content="https://ugc.production.linktr.ee/32206866-43a4-4d91-878f-9d56e149a346_IMG-2109.jpeg" />
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Roboto:wght@400;700&display=swap" />
@@ -77,16 +77,6 @@
           cursor: pointer;
           color: var(--button-active);
         }
-        
-        h2::before {
-          content: "";
-          display: inline-block;
-          width: 10px;
-          height: 40px;
-          background-color: var(--button-active);
-          margin-right: 10px;
-          vertical-align: middle;
-        }
     
         * { box-sizing: border-box; }
         body {
@@ -116,7 +106,8 @@
           margin-bottom: 1rem;
         }
     
-        header h1 { margin: 0.5rem 0 0.3rem; font-size: 2rem; letter-spacing: 2px; font-weight: 700; }
+        header h1 { margin: 0.8rem 0.5rem 0.8rem; font-size: 2rem; letter-spacing: 2px; font-weight: 700; }
+        header h2 { margin: 0.3rem 0 0.3rem; font-size: 1.4rem; letter-spacing: 2px; font-weight: 700; }
     
         header p.subtitle { margin: 0; font-size: 1.2rem; color: #555; }
         
@@ -175,6 +166,15 @@
         .lang-section { display: none; opacity: 0; transition: opacity 0.5s ease; }
         .lang-section.active { display: block; opacity: 1; }
         .container section { margin-bottom: 2rem; }
+        .container h2::before {
+          content: "";
+          display: inline-block;
+          width: 10px;
+          height: 40px;
+          background-color: var(--button-active);
+          margin-right: 10px;
+          vertical-align: middle;
+        }
         .container h2 {
           font-size: 1.8rem;
           margin-bottom: 0.5rem;
@@ -182,11 +182,16 @@
           border-bottom: 1px solid var(--link-border);
           padding-bottom: 0.3rem;
         }
-        .container h4 {
-          font-size: 1.1rem;
-          font-weight: 500;
-          color: #5e5a55;
+        .container h3 {
+          font-size: 1.4rem;
+          font-weight: 700;
           margin-top: 0.5rem;
+        }
+        .container h4 {
+          font-size: 1rem;
+          font-weight: 400;
+          color: #5e5a55;
+          margin-top: 0.2rem;
         }
         .container p { margin: 0.6rem 0; font-size: 1rem; }
         
@@ -243,8 +248,9 @@
     <a href="#main" class="skip-link">본문 바로가기</a>
 
     <header>
+        <h1>YOONSI</h1>
         <img src="https://ugc.production.linktr.ee/32206866-43a4-4d91-878f-9d56e149a346_IMG-2109.jpeg" alt="YOONSI 로고" class="logo" />
-        <h1>YOONSI NATURAL BEAUTY MAKER</h1>
+        <h2>NATURAL BEAUTY MAKER</h2>
         <p class="subtitle">MAKEUP &amp; HEADSPA</p>
         <div class="toggle-controls">
             <button type="button" id="darkModeToggle">🌙 다크 모드</button>
@@ -266,7 +272,12 @@
             <div class="lang-section active" id="lang-ko">
                 <section>
                     <h2>YOONSI</h2>
-                    <p>YOONSI는 크리에이티브 디렉터 윤시의 비전에서 시작되었습니다. 단순히 외면을 꾸미는 것을 넘어, 내면과의 깊은 연결을 통해 진정한 자연 그대로의 본모습을 표현하는 공간을 만들고자 했습니다. 메이크업과 헤드스파라는 특별한 경험을 통해, 고객은 스스로를 탐구하고, 내면의 아름다움과 외면의 조화를 느낍니다. YOONSI는 "있는 그대로의 나"를 온전히 받아들이고 사랑할 수 있는 공간을 제공합니다.</p>
+                    <p>
+                        YOONSI는 크리에이티브 디렉터 윤시의 비전에서 시작되었습니다.
+                        단순히 외면을 꾸미는 것을 넘어, 내면과의 깊은 연결을 통해 진정한 자연 그대로의 본모습을 표현하는 공간을 만들고자 했습니다.
+                        메이크업과 헤드스파라는 특별한 경험을 통해, 고객은 스스로를 탐구하고, 내면의 아름다움과 외면의 조화를 느낍니다.
+                        YOONSI는 "있는 그대로의 나"를 온전히 받아들이고 사랑할 수 있는 공간을 제공합니다.
+                    </p>
                 </section>
 
                 <section>
@@ -275,8 +286,10 @@
 
                 <section>
                     <h3>💆🏻‍♀️ 에센셜 스파</h3>
+                    <h4>바쁜 일상 속, 가볍지만 깊은 휴식</h4>
                     <p>
-                        맞춤형 아로마와 리클라이닝 전신 안마베드에서 두피부터 전신까지 순환을 도와줍니다. 시로다라 워터 스파와 싱잉볼 테라피로 마음의 긴장을 풀어주는 짧지만 깊은 힐링 코스입니다.
+                        에센셜 스파는 바쁜 일상 속에서도 가볍지만 깊은 힐링을 경험할 수 있는 코스입니다.
+                        맞춤형 아로마 블렌딩과 전신 이완을 위한 리클라이닝 마사지 베드가 두피부터 전신까지 편안한 순환을 돕고, 시로다라 워터 스파와 싱잉볼 테라피로 깊은 휴식의 상태로 인도합니다.
                     </p>
                     <details>
                         <summary>코스 상세 보기</summary>
@@ -329,8 +342,11 @@
 
                 <section>
                     <h3>💆🏻‍♀️ 케어 &amp; 릴랙스 테라피</h3>
+                    <h4>몸과 마음의 에너지를 부드럽게 되돌리는 시간</h4>
                     <p>
-                        두피부터 피부, 전신의 흐름을 정돈하며 깊은 휴식을 선사하는 코스입니다. 개인 맞춤형 두피 진단과 페이셜 케어, 얼굴과 어깨의 긴장을 풀어주는 릴랙싱 마사지가 포함됩니다. 싱잉볼과 코시차임 사운드 테라피로 몸과 마음을 잔잔히 어루만지며 고요와 회복을 선사합니다.
+                        케어 & 릴랙스 테라피는 두피부터 피부, 전신의 흐름을 정돈하며 깊은 휴식을 선사하는 코스입니다.
+                        개인 맞춤형 두피 진단을 통해 최적의 케어를 제공하고, 얼굴과 어깨의 긴장을 풀어주는 마사지와 활력을 불어넣는 페이셜 케어가 이어집니다.
+                        싱잉볼과 코시차임 사운드 테라피가 맑은 울림으로 몸과 마음을 잔잔히 어루만지며 깊은 고요와 회복으로 이끌어줍니다.
                     </p>
                     <details>
                         <summary>코스 상세 보기</summary>
@@ -378,8 +394,11 @@
 
                 <section>
                     <h3>💆🏻‍♀️ 시그니처 사운드 힐링 테라피</h3>
+                    <h4>향 · 소리 · 촉감을 통한 깊은 치유</h4>
                     <p>
-                        시그니처 사운드 힐링 테라피는 스파와 함께 아로마 터치, 울림 있는 사운드 테라피로 깊고 편안한 치유의 시간을 선사합니다. 리프팅 마사지와 모이스처라이징 팩으로 피부와 근육의 긴장을 풀어준 뒤, 싱잉볼과 띵샤의 울림이 온몸을 감싸며 평온한 에너지를 채워줍니다. 마무리로는 풋 테라피로 따뜻한 물과 아로마 향을 느끼며 긴장을 풀거나, 혹은 내추럴 베이스 메이크업으로 맑고 자연스러운 피부 표현을 완성할 수 있습니다.
+                        시그니처 사운드 힐링 테라피는 스파와 함께 아로마 터치, 울림 있는 사운드 테라피로 깊고 편안한 치유의 시간을 선사합니다.
+                        리프팅 마사지와 모이스처라이징 팩으로 피부와 근육의 긴장을 풀어준 뒤, 싱잉볼과 띵샤의 울림이 온몸을 감싸며 평온한 에너지를 채워줍니다.
+                        마무리로는 풋 테라피로 따뜻한 물과 아로마 향을 느끼며 긴장을 풀거나, 혹은 내추럴 베이스 메이크업으로 맑고 자연스러운 피부 표현을 완성할 수 있습니다.
                     </p>
                     <details>
                         <summary>코스 상세 보기</summary>
@@ -464,8 +483,12 @@
             <div class="lang-section" id="lang-en">
                 <section>
                     <h2>YOONSI</h2>
-                    <p>YOONSI was born from the vision of Creative Director Yoonsi. It goes beyond enhancing outer beauty — it's about connecting with your inner self and expressing your true, natural essence. Through the transformative experiences of makeup
-                        and head spa, clients are invited to reconnect with their inner selves and discover harmony between inner beauty and outer expression. YOONSI is a space where you’re invited to embrace your true self — exactly as you are.</p>
+                    <p>
+                        YOONSI was born from the vision of Creative Director Yoonsi.
+                        It goes beyond enhancing outer beauty — it’s about connecting with your inner self and expressing your true, natural essence.
+                        Through the transformative experiences of makeup and head spa, clients are invited to reconnect with their inner selves and discover harmony between inner beauty and outer expression.
+                        YOONSI is a space where you're invited to embrace your true self — exactly as you are.
+                    </p>
                 </section>
 
                 <section>
@@ -474,8 +497,11 @@
 
                 <section>
                     <h3>💆🏻‍♀️ Essential Spa</h3>
+                    <h4>Effortless Healing for Busy Days</h4>
                     <p>
-                        A short yet deeply relaxing escape for busy days. Aroma blending and reclining full-body massage support soothing circulation from head to toe. Concludes with Shirodhara-inspired water therapy and singing bowl sounds — short but deeply calming.
+                        Designed for busy lifestyles, this session offers a brief yet deeply restorative experience.
+                        A custom aroma blend and a fully reclining massage bed are designed to promote full-body relaxation and enhance circulation from head to toe.
+                        The session concludes with a water-flow scalp therapy inspired by Shirodhara, along with singing bowl sounds to help soothe the mind.
                     </p>
                     <details>
                         <summary>View Course Details</summary>
@@ -528,9 +554,11 @@
 
                 <section>
                     <h3>💆🏻‍♀️ Care &amp; Relax Therapy</h3>
+                    <h4>Rebalancing Energy for Mind and Body</h4>
                     <p>
-                        This therapy resets the flow from the scalp through the body, encouraging full relaxation and renewal. It includes personalized scalp diagnosis, facial care, and a relaxing massage to release facial and shoulder tension. Singing bowls and Koshi chimes
-                        gently calm the senses and bring deep serenity.
+                        This therapy gently resets the energy flow from the scalp throughout the body, promoting deep relaxation and restoring balance.
+                        A personalized scalp diagnosis allows for targeted care, and a facial care session that brings a gentle sense of refreshment.
+                        The pure resonance of singing bowls and Koshi chimes soothes both body and mind, inviting deep stillness and renewal.
                     </p>
                     <details>
                         <summary>View Course Details</summary>
@@ -580,9 +608,11 @@
 
                 <section>
                     <h3>💆🏻‍♀️ Signature Sound Healing Therapy</h3>
+                    <h4>Deep Healing Through Scent, Sound, and Touch</h4>
                     <p>
-                        This signature therapy offers a deeply soothing experience where spa, aroma, and sound unite in harmony. A lifting massage and hydrating facial mask help release tension from skin and muscles. Vibrations from singing bowls and tingsha envelop the body,
-                        restoring inner peace. Conclude with a warm foot soak or a natural base makeup to highlight your post-spa glow.
+                        This session offers deep relaxation and restoration through a unique blend of spa therapy, aromatic touch, and sound resonance.
+                        A lifting massage and a hydrating facial mask help release tension from the skin and muscles. Next, the soothing vibrations of singing bowls and tingsha (Tibetan chimes) resonate through your body, restoring peace and inner balance.
+                        To conclude, you may choose either a warm, aromatic foot therapy or a natural base makeup to enhance your skin’s clarity and glow.
                     </p>
                     <details>
                         <summary>View Course Details</summary>
